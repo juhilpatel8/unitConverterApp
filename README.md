@@ -9,7 +9,7 @@ Run the command `npm install`
 ## Production Server
 Run `npm start` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-API is available at `http://localhost:8080/api`. Simply hit it in URL and wait for few seconds to
+API is available at `http://localhost:8080/convert`. Simply hit it in URL and wait for few seconds to
 get data.
 
 ## Development server
