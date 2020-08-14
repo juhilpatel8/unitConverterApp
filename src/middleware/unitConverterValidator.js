@@ -4,15 +4,10 @@ module.exports.validateUnit = function (req, res, next) {
 
     const validUnit = ['liters', 'cups', 'gallons', 'cubic-inch', 'cubic-feet', 'tbsp','celsius', 'fahrenheit', 'kelvin', 'rankine'];
 
-    //validate if the body is empty for POST calls
-    if (req.method === 'POST' && req.body.constructor === Object && Object.keys(req.body).length === 0) {
-        return res.status(400).send({
-            errorMessage: 'Invalid Request!! post body is empty!!'
-        });
-    }
 
+
+     //validate if initial unit and target unit is string
     if (req.method === 'POST') {
-        //validate if initial unit and target unit is string
         if (!validator.isAlpha(req.body.initialUnit) && !validator.isAlpha(req.body.targetUnit)) {
             return res.status(400).send({
                 errorMessage: 'Invalid Request!! initialUnit and targetUnit valid values are [tbsp,gallons,cups,cubic-inch,cubic-feet,celsius,kelvin,rankine,fahrenheit,liters] !!'
@@ -50,7 +45,14 @@ module.exports.validateUnit = function (req, res, next) {
             });
         }
 
+     //validate if the body is empty for POST calls
+    if (req.method === 'POST' && req.body.constructor === Object && Object.keys(req.body).length === 0) {
+        return res.status(400).send({
+            errorMessage: 'Invalid Request!! post body is empty!!'
+        });
     }
-    // we want to make sure we want to go to the next routes
+
+    }
+    // go to the next routes
     next();
 }
