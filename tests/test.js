@@ -7,11 +7,11 @@ import app from '../src/server';
 chai.use(chaiHttp);
 chai.should();
 
-describe('/POST convert - Fahrenheit to Rankine conversion', () => {
+describe('/POST unit-convert - Fahrenheit to Rankine conversion', () => {
     it('it should return 200 -correct', done => {
      chai
       .request(app)
-      .post('/convert')
+      .post('/unit-convert')
       .send({
        
         initialValue : 84.2,
@@ -31,11 +31,11 @@ describe('/POST convert - Fahrenheit to Rankine conversion', () => {
     })
    })
 
-   describe('/POST convert - Kelvin to Fahrenheit conversion', () => {
+   describe('/POST unit-convert - Kelvin to Fahrenheit conversion', () => {
     it('it should return 200 - incorrect', done => {
      chai
       .request(app)
-      .post('/convert')
+      .post('/unit-convert')
       .send({
        
         initialValue : 317.33,
@@ -55,11 +55,11 @@ describe('/POST convert - Fahrenheit to Rankine conversion', () => {
     })
    })  
 
-   describe('/POST convert - Cups to Liters conversion', () => {
+   describe('/POST unit-convert - Cups to Liters conversion', () => {
     it('it should return 200 - correct', done => {
      chai
       .request(app)
-      .post('/convert')
+      .post('/unit-convert')
       .send({
        
         initialValue : 25.6,
@@ -79,11 +79,11 @@ describe('/POST convert - Fahrenheit to Rankine conversion', () => {
     })
    })  
 
-   describe('/POST convert - Gallons to Kelvin conversion', () => {
+   describe('/POST unit-convert - Gallons to Kelvin conversion', () => {
     it('it should return 200 - invalid', done => {
      chai
       .request(app)
-      .post('/convert')
+      .post('/unit-convert')
       .send({
        
         initialValue : 73.12,
@@ -104,11 +104,11 @@ describe('/POST convert - Fahrenheit to Rankine conversion', () => {
    })  
 
 
-   describe('/POST convert - Invalid student response', () => {
+   describe('/POST unit-convert - Invalid student response', () => {
     it('it should return 400 - invalid request', done => {
      chai
       .request(app)
-      .post('/convert')
+      .post('/unit-convert')
       .send({
        
         initialValue : 73.12,
@@ -128,11 +128,11 @@ describe('/POST convert - Fahrenheit to Rankine conversion', () => {
     })
    })  
 
-   describe('/POST convert - Invalid initialUnit', () => {
+   describe('/POST unit-convert - Invalid initialUnit', () => {
     it('it should return 400 - invalid request', done => {
      chai
       .request(app)
-      .post('/convert')
+      .post('/unit-convert')
       .send({
        
         initialValue : 136.1,

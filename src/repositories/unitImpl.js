@@ -11,7 +11,6 @@ module.exports = {
                 if(computedResult === 0)
                 {
                     result='invalid';
-                    break;
                 }
                 else
                 {
@@ -24,7 +23,6 @@ module.exports = {
                 if(computedResult === 0)
                 {
                     result='invalid';
-                    break;
                 }
                 else
                 {
@@ -37,7 +35,6 @@ module.exports = {
                 if(computedResult === 0)
                 {
                     result='invalid';
-                    break;
                 }
                 else
                 {
@@ -50,92 +47,86 @@ module.exports = {
                 if(computedResult === 0)
                 {
                     result='invalid';
-                    break;
                 }
                 else
                 {
                 computedResult = Math.round(computedResult * 10)/10
                 result = computedResult === studentResponse ? 'correct' : 'incorrect';
-                break;
                 }
+                break;
             case 'cubic-feet':
                 computedResult = unitConverterService.convertCubicFeet(initialValue, targetUnit);
                 if(computedResult === 0)
                 {
                     result='invalid';
-                    break;
                 }
                 else
                 {
                 computedResult = Math.round(computedResult * 10)/10
                 result = computedResult === studentResponse ? 'correct' : 'incorrect';
-                break;
                 }
+                break;
             case 'gallons':
                 computedResult = unitConverterService.convertGallons(initialValue, targetUnit);
                 if(computedResult === 0)
                 {
                     result='invalid';
-                    break;
                 }
                 else
                 {
                 computedResult = Math.round(computedResult * 10)/10
                 result = computedResult === studentResponse ? 'correct' : 'incorrect';
-                break;
                 }
+                break;
             case 'celsius':
                 computedResult = unitConverterService.convertCelsius(initialValue, targetUnit);
                 if(computedResult === 0)
                 {
                     result='invalid';
-                    break;
                 }
                 else
                 {
                 computedResult = Math.round(computedResult * 10)/10                
                 result = computedResult === studentResponse ? 'correct' : 'incorrect';
-                break;
                 }
+                break;
             case 'fahrenheit':
                 computedResult = unitConverterService.convertFahrenheit(initialValue, targetUnit);
                 if(computedResult === 0)
                 {
                     result='invalid';
-                    break;
                 }
                 else
                 {
                 computedResult = Math.round(computedResult * 10)/10  
                 result = computedResult === studentResponse ? 'correct' : 'incorrect';
-                break;
                 }
+                break;
             case 'kelvin':
                 computedResult = unitConverterService.convertKelvin(initialValue, targetUnit);
                 if(computedResult === 0)
                 {
                     result='undefined';
-                    break;
                 }
                 else
                 {
                 computedResult = Math.round(computedResult * 10)/10  
                 result = computedResult === studentResponse ? 'correct' : 'incorrect';
-                break;
                 }
+                break;
+
             case 'rankine':
                 computedResult = unitConverterService.convertRankine(initialValue, targetUnit);
                 if(computedResult === 0)
                 {
                     result='undefined';
-                    break;
                 }
                 else
                 {
                 computedResult = Math.round(computedResult * 10)/10  
                 result = computedResult === studentResponse ? 'correct' : 'incorrect';
-                break;
                 }
+                break;
             default:
                 result = 'invalid';
             break;
