@@ -11,6 +11,7 @@ Run `npm start` to build the project.
 
 API is available at `http://localhost:8080/unit-convert`. Simply hit it in URL and wait for few seconds to get data.
 
+Run `npm test` to run the tests. 
 
 ## Improvenents
 
