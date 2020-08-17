@@ -13,7 +13,7 @@ API is available at `http://localhost:8080/unit-convert`. Simply hit it in URL a
 
 Run `npm test` to run the tests. 
 
-## Improvenents
+## Improvements
 
 1. I can add more unit tests to cover middleware function tests.
 2. I can add CI/CD pipeline.
