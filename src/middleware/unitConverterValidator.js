@@ -1,10 +1,7 @@
 var validator = require('validator');
+var constants = require('../config/config');
 
 module.exports.validateUnit = function (req, res, next) {
-
-    const validUnit = ['liters', 'cups', 'gallons', 'cubic-inch', 'cubic-feet', 'tbsp','celsius', 'fahrenheit', 'kelvin', 'rankine'];
-
-
 
      //validate if initial unit and target unit is string
     if (req.method === 'POST') {
@@ -31,7 +28,7 @@ module.exports.validateUnit = function (req, res, next) {
         }
 
         //check initialUnit and targetUnit are valid
-        if(!validUnit.includes(req.body.initialUnit.toString().toLowerCase()) || !validUnit.includes(req.body.targetUnit.toString().toLowerCase()) ){
+        if(!constants.validUnit.includes(req.body.initialUnit.toString().toLowerCase()) || !constants.validUnit.includes(req.body.targetUnit.toString().toLowerCase()) ){
             return res.status(400).send({
                 errorMessage: 'Invalid Request!! initialUnit or targetUnit does not look correct;valid values are [tbsp,gallons,cups,cubic-inch,cubic-feet,celsius,kelvin,rankine,fahrenheit,liters]'
             });
