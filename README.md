@@ -9,7 +9,18 @@ Run the command `npm install`
 ## local Server
 Run `npm start` to build the project. 
 
-API is available at `http://localhost:8080/unit-convert`. Simply hit it in URL and wait for few seconds to get data.
+POST API is available at `http://localhost:8080/unit-convert`. 
+
+Sample request payload 
+```
+{
+	"initialValue" : 25.6,
+	"initialUnit" : "cups",
+	"targetUnit" : "liters",
+	"studentResponse" : 6.1
+}
+
+```
 
 Run `npm test` to run the tests. 
 
