@@ -1,4 +1,4 @@
-var unitRepo = require('../repositories/unitImpl');
+var unitConverterService = require('../service/unitConverterService');
 
  class UnitController {
 
@@ -14,7 +14,7 @@ var unitRepo = require('../repositories/unitImpl');
     var initialUnit = req.body.initialUnit;
     var targetUnit = req.body.targetUnit;
     var studentResponse = req.body.studentResponse;
-    let result = unitRepo.convertUnit(initialValue, initialUnit, targetUnit,studentResponse);
+    let result = unitConverterService.convertUnit(initialValue, initialUnit, targetUnit,studentResponse);
     let resultMessage = { 'output' : result};
     return res.status(200).send(resultMessage);
    
